@@ -1,0 +1,25 @@
+<form [formGroup]="form" class=" shadow w-1/3 mx-auto p-10 rounded-md" (ngSubmit)="onsubmit()">
+  <h5 class="text-xl font-semibold p-4">{{isEdit ? "Edit Student" :  "Add Student"}}</h5>
+  <div>
+    <input formControlName="name" type="text" class="border w-full my-3 p-2 px-4 rounded-md" placeholder="Name">
+    @if (form.controls['name'].errors && form.controls['name'].touched ) {
+      <span class="text-red-500">
+        Name is Required
+      </span>
+    }
+  </div>
+
+  <input formControlName="address" type="text" class="border w-full my-3 p-2 px-4 rounded-md" placeholder="Address">
+  <div>
+    <input formControlName="email" type="email" class="border w-full my-3 p-2 px-4 rounded-md" placeholder="Email">
+    @if (form.controls['email'].errors && form.controls['email'].touched ) {
+      <span class="text-red-500">
+        Email most be valid
+      </span>
+    }
+  </div>
+  <input formControlName="phoneNumber" type="text" class="border w-full my-3 p-2 px-4 rounded-md" placeholder="Phone Number">
+
+  <button class="bg-blue-500 shadow-md px-4 py-2 rounded-md text-white mr-4">{{isEdit ? "Edit Student" :  "Add Student"}}</button>
+  <button [routerLink]="'/students'" class="shadow-md px-4 py-2 rounded-md text-blue-400">Cancel</button>
+</form>
