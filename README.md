@@ -32,11 +32,6 @@ This is a simple yet effective CRUD (Create, Read, Update, Delete) application t
 
 ---
 
-##  Why This Project?
-
-Despite its simplicity, it performs well and showcases the core concepts of full-stack development.
-
----
 
 ##  Future Enhancements
 
